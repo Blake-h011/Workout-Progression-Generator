@@ -10,7 +10,7 @@ Reaching a specific strength goal or target weight on an exercise can often be d
 
 Takes user input such as a goal weight that the user wants to perform for a one rep max, their current one rep max, the date they want to achieve the goal, and the current date. The program will then output a structured program to slowly build strength progression to achieve the desired one rep max on the desired day, factoring in rest and failed lifts.
 
-![System diagram](docs/CS193 Final Project Flowchart.png)
+![System diagram](docs/flowchart.png)
 
 ## Tech Stack
 
