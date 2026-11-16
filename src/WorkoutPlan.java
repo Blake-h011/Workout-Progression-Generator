@@ -19,4 +19,37 @@ public class WorkoutPlan {
         this.endDate = endDate;
         this.maxDays = maxDays;
     }
+
+    public void setCurrentMax(double currentMax) {
+        this.currentMax = currentMax;
+    }
+    public void setGoalMax(double goalMax) {
+        this.goalMax = goalMax;
+    }
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+    public void setMaxDays(int maxDays) {
+        this.maxDays = maxDays;
+    }
+
+
+    public double getCurrentMax() {
+        return this.currentMax;
+    }
+    public double getGoalMax() {
+        return this.goalMax;
+    }
+    public LocalDate getStartDate() {
+        return this.startDate;
+    }
+    public LocalDate getEndDate() {
+        return this.endDate;
+    }
+    public int getMaxDays() {
+        return this.maxDays;
+    }
 }
