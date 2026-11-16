@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.time.temporal.ChronoUnit;
 
 //TODO: Javadoc
 
@@ -51,5 +52,16 @@ public class WorkoutPlan {
     }
     public int getMaxDays() {
         return this.maxDays;
+    }
+    public ArrayList<WorkoutDay> getSchedule() {
+        return this.schedule;
+    }
+
+    public int getNumSessions() {
+        return (int) ChronoUnit.DAYS.between(getStartDate(), getEndDate()) + 1;
+    }
+
+    public void addDay(WorkoutDay day) {
+        schedule.add(day);
     }
 }
