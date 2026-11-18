@@ -20,4 +20,13 @@ public class Planner {
     public static double roundToStep(double weight) {
         return Math.round(weight / roundingStep) * roundingStep;
     }
+
+    public static void buildSchedule(WorkoutPlan plan) {
+        double[] weights = calculateOneRepMaxes(plan);
+
+        for (int i = 0; i < weights.length; i++) {
+            WorkoutDay day = new WorkoutDay(weights[i], false, plan.getStartDate().plusDays(i));
+            plan.addDay(day);
+        }
+    }
 }

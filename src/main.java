@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 
 //TODO: Javadoc
 
@@ -72,8 +73,8 @@ public static void main(String[] args) {
     WorkoutPlan plan = new WorkoutPlan(currentMax, goalMax, startDate, endDate, maxDays);
 
     //TESTING CODE:
-    double[] weights = Planner.calculateOneRepMaxes(plan);
-    for (int i = 0; i < weights.length; i++) {
-        IO.println(weights[i]);
+    Planner.buildSchedule(plan);
+    for (int i = 0; i < plan.getSchedule().size(); i++) {
+        IO.println(plan.getSchedule().get(i));
     }
 }

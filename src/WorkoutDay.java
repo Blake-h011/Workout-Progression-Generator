@@ -29,6 +29,9 @@ public class WorkoutDay {
 
     @Override
     public String toString() {
-        return "Date: " + getDate() + "\n" + "Daily Max: " + getDailyMax();
+        if (isRestDay() == true) {
+            return getDate() + ": Rest";
+        }
+        return getDate() + ": " + getDailyMax();
     }
 }
