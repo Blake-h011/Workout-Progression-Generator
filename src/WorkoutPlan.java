@@ -57,7 +57,7 @@ public class WorkoutPlan {
         return this.schedule;
     }
 
-    public int getNumSessions() {
+    public int getTotalDays() {
         return (int) ChronoUnit.DAYS.between(getStartDate(), getEndDate()) + 1;
     }
 
