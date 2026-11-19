@@ -1,8 +1,7 @@
 import java.io.PrintWriter;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
 
-//TODO: Javadoc
+//TODO: Javadoc, write tests
 
 public static void main(String[] args) {
     double currentMax = 0.0;
@@ -69,10 +68,13 @@ public static void main(String[] args) {
         }
     }
     WorkoutPlan plan = new WorkoutPlan(currentMax, goalMax, startDate, endDate, maxDays);
-
-    //TESTING CODE:
     Planner.buildSchedule(plan);
-    for (int i = 0; i < plan.getSchedule().size(); i++) {
-        IO.println(plan.getSchedule().get(i));
+
+    try (PrintWriter pw = new PrintWriter(new FileOutputStream("plan.txt"))) {
+        for (int i = 0; i < plan.getSchedule().size(); i++) {
+            pw.println(plan.getSchedule().get(i));
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
     }
 }
